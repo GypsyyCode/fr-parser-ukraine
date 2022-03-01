@@ -52,6 +52,9 @@ func ParseFR(url string) *CompleteArticle {
 						fmt.Printf("%+v\n", err)
 					}
 					now := time.Now()
+					if now.Hour() < hours {
+						now = now.AddDate(0, 0, -1)
+					}
 					date = time.Date(now.Year(), now.Month(), now.Day(), hours, minutes, 0, 0, now.Location())
 				}
 

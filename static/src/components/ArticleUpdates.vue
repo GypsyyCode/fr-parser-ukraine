@@ -2,7 +2,7 @@
   <el-row justify="center">
     <el-timeline>
       <template v-for="timestamp in keys" :key="timestamp">
-        <el-timeline-item :timestamp="createTime(timestamp)" placement="top" :color="color">
+        <el-timeline-item :timestamp="createTime(timestamp)" placement="top" :color="color" >
           <el-card class="box-card" v-for="(article, index) in dings[timestamp]" :key="index" :style="getCardMargin(index)">
             <p>{{article}}</p>
           </el-card>
@@ -17,7 +17,7 @@ import Sugar from "sugar"
 import {ElRow, ElTimeline, ElTimelineItem, ElCard} from "element-plus"
 
 async function fetchData() {
-  const news = await fetch("http://localhost:9999/updates");
+  const news = await fetch("/updates");
   let newsJson = await news.json();
   const data = newsJson.message.updates;
 

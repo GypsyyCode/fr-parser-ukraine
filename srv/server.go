@@ -22,7 +22,7 @@ func NewServer(router *gin.Engine,
 func (s *Server) Run() error {
 	r := s.Routes()
 
-	err := r.Run(":9999")
+	err := r.Run(":80")
 
 	if err != nil {
 		log.Printf("Server - there was an error calling Run on rounter: %v", err)

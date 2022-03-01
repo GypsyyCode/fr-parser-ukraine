@@ -17,13 +17,19 @@ func main() {
 }
 
 func run() error {
+	port := os.Getenv("PORT")
+
+	if port == "" {
+	  port = "3000"
+	}
+	
 	router := gin.New()
 	router.Use(gin.Recovery())
 	router.Use(cors.Default())
 
 	server := app.NewServer(router /* ,services */)
 
-	err := server.Run()
+	err := server.Run(port)
 	// router := srv.setupRouter()
 	if err != nil {
 		return err

@@ -34,7 +34,7 @@ export default {
             let date = new Date(num *1000)
             let d = Sugar.Date.create(date)
 
-            return Sugar.Date.format(d, '{dd}.{MM}.{yyyy} {hh}:{mm}')
+            return Sugar.Date.format(d, '{dd}.{MM}.{yyyy} {HH}:{mm}')
         },
         getCardMargin(index) {
             if (index >= 0) {

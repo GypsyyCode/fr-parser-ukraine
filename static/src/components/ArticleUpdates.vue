@@ -1,5 +1,8 @@
 <template>
   <el-row justify="center">
+      <span class="gravur">Made with <span style="color: #e2555567;">&#9829;</span> by Fabian Lehmann</span>
+  </el-row>
+  <el-row justify="center">
     <el-timeline>
       <template v-for="timestamp in keys" :key="timestamp">
         <el-timeline-item
@@ -81,6 +84,11 @@ export default {
 </script>
 
 <style lang="css">
+.gravur{
+  font-size: 0.7rem;
+  color: #2c3e50a2;
+  margin-bottom: 1.6rem
+}
 .box-card {
   font-size: 1.2rem;
   /* line-height: 1.25rem; */

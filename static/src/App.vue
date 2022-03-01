@@ -33,4 +33,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+@media (max-width: 720px) {
+  #app {
+    margin-top: 0.8rem;
+  }
+  
+}
 </style>

@@ -1,21 +1,15 @@
 <template>
-  <Suspense>
-    <template #default>
-      <ArticleUpdates />
-    </template>
-    <template #fallback>
-      <div>Loading...</div>
-    </template>
-  </Suspense>
+  <layout-base></layout-base>
 </template>
 
 <script>
-import ArticleUpdates from "./components/ArticleUpdates.vue";
+// import ArticleUpdates from "./components/ArticleUpdates.vue";
+import LayoutBase from "./components/LayoutBase.vue";
 
 
 
 export default {
-  components: { ArticleUpdates },
+  components: { LayoutBase },
 
   
 };

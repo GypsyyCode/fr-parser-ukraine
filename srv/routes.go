@@ -14,6 +14,7 @@ func (s *Server) Routes() *gin.Engine {
 
 	router.GET("/", s.ServeFrontend())
 	router.GET("/updates", s.ParseFR())
+	router.GET("/articles", s.GetGoogleNewsFeed())
 
 	return router
 }

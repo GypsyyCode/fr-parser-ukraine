@@ -18,7 +18,7 @@ type GoogleNewsFeed struct {
 func (s *Server) ParseFR() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Header("Content.Type", "application/json")
-		url := "https://www.fr.de/politik/ukraine-krieg-russland-kiew-invasion-kaempfe-militaer-wladimir-putin-wolodymyr-selenskyj-konflikt-news-ticker-zr-91391160.html"
+		url := "https://www.fr.de/politik/news-ukraine-krieg-russland-verluste-wladimir-putin-niederlage-soldaten-armee-zr-91422288.html"
 		res := parser.ParseFR(url)
 
 		if res == nil {
